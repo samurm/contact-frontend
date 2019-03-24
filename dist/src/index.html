@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contactos</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/styles/contact.css" />
+</head>
+<body>
+    <div class="col-sm-8 padding-normal">
+        <div class="row alphabet">
+            <div class="col-sm-12" id="divAlphabet">
+            </div>
+        </div>
+        <div class="row padding-top-normal">
+            <div class="col-sm-1">
+                <span class="glyphicon glyphicon-plus icon" id="newContact"></span>
+            </div>
+            <div class="col-sm-8">
+                <span class="glyphicon glyphicon-refresh icon" id="refreshContacts"></span>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <select class="form-control" id="selectFilter">
+                      <option>Nombre</option>
+                      <option>Apellidos</option>
+                      <option>Edad</option>
+                    </select>
+                  </div>
+            </div>
+        </div>
+        <div id="containerContacts">
+
+        </div>
+    </div>
+    <div class="col-sm-4 padding-normal edit-contact">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <img class="avatar" id="imageContact" src="assets/img/camera.png" draggable="true">
+            </div>
+        </div>
+        <div class="row padding-top-normal">
+            <div class="col-sm-12 text-center">
+                <input id="inputImage" class="avatar" type="file">
+            </div>
+        </div>
+        <div class="row padding-top-normal">
+            <div class="col-sm-4 text-right">
+                <label class="text-big">Nombre: </label>
+            </div>
+            <div class="col-sm-8 text-left">
+                <input class="form-control" id="nameContact" placeholder="Samu">
+            </div>
+        </div>
+        <div class="row padding-top-normal">
+            <div class="col-sm-4 text-right">
+                <label class="text-big">Apellido: </label>
+            </div>
+            <div class="col-sm-8 text-left">
+                <input class="form-control" id="surnameContact" placeholder="Ramos Muñoz">
+            </div>
+        </div>
+        <div class="row padding-top-normal">
+            <div class="col-sm-4 text-right">
+                <label class="text-big">Edad: </label>
+            </div>
+            <div class="col-sm-8 text-left">
+                <input type="number" class="form-control" id="ageContact" placeholder="21">                
+            </div>
+        </div>
+        <div id="containerPhones">
+            <div class="row padding-top-normal">
+                <div class="col-sm-4 text-right">
+                    <label class="text-big">Telefono: </label>
+                </div>
+                <div class="col-sm-6">
+                    <input class="form-control" id="phoneInput0" placeholder="665231234">
+                </div>
+                <div class="col-sm-2">
+                    <span class="glyphicon glyphicon-plus icon" id="addPhones"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row padding-top-normal">
+            <div class="col-sm-4 text-right">
+                <label class="text-big">Género: </label>
+            </div>
+            <div class="col-sm-8 text-left">
+                <div class="form-group">
+                    <select class="form-control" id="genderContact">
+                        <option value="Hombre">Hombre</option>
+                        <option value="Mujer">Mujer</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row padding-top-normal" id="rowButtons">
+            <div class="col-sm-12 text-right">
+               <button class="btn btn-info" id="createContact">
+                   Crear
+               </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="exceptions/contact.exceptions.js"></script>
+<script src="constants/contact.constant.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="views/contact.view.js"></script>
+<script src="models/contact.model.js"></script>
+<script src="services/contact.service.js"></script>
+<script src="services/local.service.js"></script>
+<script src="services/fetch.service.js"></script>
+<script src="services/regexp.service.js"></script>
+<script src="controllers/contact.controller.js"></script>
+<script src="app.js"></script>
+</html>
